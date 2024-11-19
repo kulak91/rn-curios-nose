@@ -114,7 +114,6 @@ function searchFiles(dir) {
 }
 
 function searchInFile(filePath) {
-  const isPathValid =
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) return console.error(`Error reading file: ${err.message}`);
     if (path.basename(filePath) !== searchFile) return;
@@ -171,4 +170,4 @@ function editFile(filePath, lines, startLine, endLine) {
   });
 }
 
-searchFiles(searchDir).catch(conosle.log);
+searchFiles(searchDir);
